@@ -1,0 +1,23 @@
+.example-menu-row {
+  margin-bottom: 24px;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  background-color: #2196F3;
+  .menu_sec{
+    display: flex;
+    align-items: center;
+  }
+  .acc_logout{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+.side-icons{
+  a:hover{
+    color: #2196F3;
+    gap: 10px;
+  }
+}

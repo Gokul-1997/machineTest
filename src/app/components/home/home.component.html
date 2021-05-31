@@ -1,0 +1,38 @@
+<div class="main-wrapper">
+<form class="example-form" (ngSubmit)="SearchBus(f)" #f="ngForm">
+  <mat-form-field style="padding-left: 10px;" appearance="fill">
+    <mat-label>Leaving from</mat-label>
+    <mat-select (selectionChange)="leave($event)" ngModel name="leaving_form" required>
+      <mat-option value="">Select Place</mat-option>
+      <mat-option value="dhaka">Dhaka</mat-option>
+      <mat-option value="comilla">Comilla</mat-option>
+      <mat-option value="chittagong">Chittagong</mat-option>
+    </mat-select>
+    <mat-error>
+      Leaving from is <strong>required</strong>
+      </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Going To</mat-label>
+    <mat-select name="going_to" [ngModel]="place[0].key" required>
+      <mat-option *ngFor="let p of place"  [value]="p.key">{{p.value}}</mat-option>
+    </mat-select>
+    <mat-error>
+      Going To is <strong>required</strong>
+      </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+  <mat-label>MM/DD/YYYY</mat-label>
+  <input matInput [matDatepicker]="picker" [min]="minDate" ngModel name="depart_date" required>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+  <mat-error>
+   Date is <strong>required</strong>
+  </mat-error>
+  </mat-form-field>
+  <button class="btn" type="submit" >Search</button>
+
+</form>
+</div>

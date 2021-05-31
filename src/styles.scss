@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ngx-toastr/toastr";
+@import '~@finastra/angular-theme/all-theme';
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.basic-container {
+  padding: 30px;
+}
+.main-wrapper{
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.btn {
+  border-radius: 4px;
+  background-color: #1565C0;
+  border: none;
+  color: #fff;
+  text-align: center;
+  // width: 130px;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgb(0 0 0 / 70%);
+}
+
+.btn{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+.btn:hover:after {
+  opacity: 1;
+  right: 10px;
+}

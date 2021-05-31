@@ -1,0 +1,41 @@
+{
+  "SeatsAva": [
+    {
+      "Classes": "Sleeper",
+      "TrainStatus": "Currently Available",
+      "Amount": 900,
+      "Status": false,
+      "id": 1
+    },
+    {
+      "Classes": "AC 3 Tier",
+      "TrainStatus": "Currently Available",
+      "Amount": 2605,
+      "Status": false,
+      "id": 2
+    },
+    {
+      "Classes": "AC 2 Tier",
+      "TrainStatus": "Currently Available",
+      "Amount": 4375,
+      "Status": false,
+      "id": 3
+    },
+    {
+      "Classes": "Sleeper",
+      "TrainStatus": "Currently Available",
+      "Amount": 745,
+      "Status": false,
+      "id": 4
+    },
+    {
+      "Classes": "Secound Sitting",
+      "TrainStatus": "Currently Available",
+      "Amount": 455,
+      "Status": false,
+      "id": 5
+    }
+  ],
+  "cancelTicket": [
+  ]
+}

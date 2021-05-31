@@ -1,0 +1,35 @@
+<div class="main-wrapper">
+<mat-card>
+  <div class="total">
+  <div class="1">
+  Leaving Form : {{ bookingData?.leaving_form }} ||
+  Start Time : {{ TrainstartTime | date:'MMMM dd yyyy hh:mm'}}
+  </div>
+  <div class="2">
+    Going To :{{ bookingData?.going_to }} ||
+    End Time : {{ TrainendTime | date:'MMMM dd yyyy hh:mm'}}
+  </div>
+  </div>
+  <div class="center">
+  <div class="col-md-12 align-items-center">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let seat of seatAva">
+        <input
+          type="checkbox"
+          value="{{ seat.id }}"
+          [checked]="seat.isSelected"
+          [disabled]="seat.Status"
+          (click)="isAllSelected(seat)"
+        />
+     <b>  Calss:</b> {{ seat.Classes }} ,
+     <b>    TrainStatus  </b> : {{ seat.TrainStatus }} ,
+      <b>  Amount  </b> : {{ seat.Amount }}
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="center">
+  <button class="btn" (click)="submitData()" [disabled]="!selectVal">Booking</button>
+</div>
+</mat-card>
+</div>

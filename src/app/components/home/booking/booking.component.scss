@@ -1,0 +1,14 @@
+.main-wrapper{
+    mat-card{
+        font-size: 18px;
+    }
+}
+.total{
+display: flex;
+justify-content: space-between;
+font-weight: bold;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,29 @@
+<div class="main-wrapper">
+<mat-tab-group (selectedTabChange)="cancelFun()">
+  <mat-tab label="Booking">
+    <div class="booking-card">
+    <div *ngIf="historyData?.length == 0">
+      No data
+    </div>
+    <div class="booking-card-inside" *ngFor="let val of historyData">
+      Classes : {{val.Classes }}<br>
+      Amount : {{val.Amount }}<br>
+      TrainStatus : {{val.TrainStatus }}
+      <button class="btn" (click)="cancelTicket(val)">Cancel Ticket</button>
+    </div>
+  </div>
+  </mat-tab>
+  <mat-tab label="Cancel">
+    <div class="booking-card">
+    <mat-card style="margin-bottom: 10px;" *ngFor="let data of cancelData">
+      Booking Date: {{data.date | date:'MMMM dd yyyy'}}<br>
+      going_to: {{data.going_to}}<br>
+      leaving_form: {{data.leaving_form}}<br>
+      Classes: {{data.Classes}}<br>
+      TrainStatus: {{data.TrainStatus}}<br>
+      Amount: {{data.Amount}}
+    </mat-card>
+  </div>
+  </mat-tab>
+</mat-tab-group>
+</div>

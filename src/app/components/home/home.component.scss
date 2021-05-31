@@ -1,0 +1,14 @@
+.main-wrapper{
+    height: 91vh;
+    form{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    mat-form-field {
+        padding-top: 10px;
+    }
+    .btn{
+        margin-bottom: 6px;
+    }
+}

@@ -1,0 +1,43 @@
+<!-- Toolbar -->
+<nav *ngIf="service.toolbar">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row class="flex">
+      <div class="menu_sec">
+        <button mat-icon-button>
+          <mat-icon (click)="sidenav.toggle()">menu </mat-icon>
+        </button>
+        <h1>Ticket Book</h1>
+        <span class="menu-spacer"></span>
+      </div>
+      <div class="user_view" >
+        <div class="acc_logout" (click)="logout()">
+          <span class="material-icons">
+            power_settings_new
+          </span>Log Out
+        </div>
+      </div>
+
+    </mat-toolbar-row>
+  </mat-toolbar>
+</nav>
+<mat-sidenav-container>
+  <mat-sidenav class="side-icons" mode="side" #sidenav>
+    <mat-nav-list (click)="sidenav.close()">
+      <a mat-list-item routerLink="home" ><span class="material-icons">
+          home
+        </span> Home </a>
+      <a mat-list-item routerLink="home/history" ><span class="material-icons">
+          history
+        </span> History </a>
+      <a mat-list-item routerLink="profile"><span class="material-icons">
+        <span class="material-icons-outlined">
+          account_circle
+          </span>
+        </span>
+        Profile </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
